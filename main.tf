@@ -28,6 +28,7 @@ resource "aws_iam_user_login_profile" "default" {
   password_reset_required = var.password_reset_required
   depends_on              = ["aws_iam_user.default"]
 
+  // todo: remove and rotate credentials for all users
   lifecycle {
     ignore_changes = ["password_length", "password_reset_required", "pgp_key"]
   }
