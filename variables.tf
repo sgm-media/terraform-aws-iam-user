@@ -1,29 +1,29 @@
 variable "namespace" {
-  type        = "string"
+  type        = string
   description = "Namespace (e.g. `eg` or `cp`)"
   default     = ""
 }
 
 variable "stage" {
-  type        = "string"
+  type        = string
   description = "Stage (e.g. `prod`, `dev`, `staging`, `infra`)"
   default     = ""
 }
 
 variable "delimiter" {
-  type        = "string"
+  type        = string
   default     = "-"
   description = "Delimiter to be used between `namespace`, `stage`, `name`, and `attributes`"
 }
 
 variable "attributes" {
-  type        = "list"
+  type        = list
   default     = []
   description = "Additional attributes (e.g. `policy` or `role`)"
 }
 
 variable "tags" {
-  type        = "map"
+  type        = map
   default     = {}
   description = "Additional tags (e.g. map(`BusinessUnit`,`XYZ`)"
 }
@@ -49,7 +49,7 @@ variable "path" {
 
 variable "groups" {
   description = "List of IAM user groups this user should belong to in the account"
-  type        = "list"
+  type        = list
   default     = []
 }
 
